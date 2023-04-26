@@ -1,16 +1,20 @@
 //class component 
 // funtions component
 
-import React from 'react'; // import React từ thư viện react 
+import React from 'react';
 
-class MyComponent extends React.Component { // kế thừa lại lớp có component của react thì class sẽ trở thành 1 react-component
-    render() {                              // tập hợp các khối html chuyển thành giao diện
+class MyComponent extends React.Component {
+    state = {
+        name: 'bui van dat',
+        adress: 'Ha Noi',
+        age: 18,
+    }
+    render() {
         return (
             <div>
-                My fisst componenet
-                {Math.random()}
+                My name is {this.state.name} and my adress is {this.state.adress}
             </div>
         )
     }
 }
-export default MyComponent; // khi gọi đến file này, sẽ hiểu là muốn sử dụng class MyComponent
+export default MyComponent; 
